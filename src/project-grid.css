@@ -1,0 +1,10 @@
+/* Balanced four-project portfolio grid */
+.projects{grid-template-columns:repeat(2,minmax(0,1fr));gap:56px 24px;align-items:start}
+.project-featured{grid-row:auto}
+.project-featured .project-visual,.project-visual{height:420px}
+.project-copy{padding-bottom:0}
+.project-copy h3{min-height:34px}
+.project-copy>p:not(.meta){min-height:50px}
+.project-note{grid-column:1/-1;min-height:230px;margin-top:14px}
+.project-note>div{max-width:620px}
+@media(max-width:760px){.projects{grid-template-columns:1fr;gap:48px}.project-featured .project-visual,.project-visual{height:350px}.project-copy h3,.project-copy>p:not(.meta){min-height:0}.project-note{grid-column:auto;margin-top:0}}

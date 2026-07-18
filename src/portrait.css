@@ -70,11 +70,8 @@
   margin-top: 0;
 }
 
-.contact-links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 18px;
+.contact-stack p {
+  margin: 0 0 18px;
 }
 
 @media (max-width: 760px) {

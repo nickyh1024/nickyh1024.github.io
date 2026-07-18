@@ -1,0 +1,43 @@
+.portrait {
+  position: relative;
+  width: min(calc(100% - 18px), 440px);
+  margin: 58px 0 0;
+}
+
+.portrait::before {
+  content: "";
+  position: absolute;
+  inset: 18px -18px -18px 18px;
+  background: var(--orange);
+}
+
+.portrait img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 34%;
+}
+
+.portrait figcaption {
+  position: relative;
+  z-index: 1;
+  margin-top: 30px;
+  font: 500 10px "DM Mono", monospace;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 760px) {
+  .portrait {
+    width: calc(100% - 14px);
+    margin-top: 42px;
+  }
+
+  .portrait::before {
+    inset: 14px -14px -14px 14px;
+  }
+}

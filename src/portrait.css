@@ -70,6 +70,13 @@
   margin-top: 0;
 }
 
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 34px;
+  align-items: center;
+}
+
 @media (max-width: 760px) {
   .portrait {
     width: calc(100% - 14px);

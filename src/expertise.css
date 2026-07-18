@@ -1,0 +1,36 @@
+.expertise-band {
+  border-block: 1px solid var(--ink);
+  padding: 16px 0;
+}
+
+.expertise-strip {
+  width: min(1180px, calc(100% - 48px));
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font: 500 11px "DM Mono", monospace;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.expertise-strip span:not(:last-child)::after {
+  content: "✦";
+  margin-left: clamp(18px, 3vw, 48px);
+}
+
+@media (max-width: 760px) {
+  .expertise-strip {
+    width: min(100% - 28px, 1180px);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 18px;
+    white-space: normal;
+  }
+
+  .expertise-strip span::after {
+    display: none;
+  }
+}

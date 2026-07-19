@@ -1,6 +1,78 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="CareLens — a healthcare pricing regression and visualization case study by Nicholas Ho."><title>CareLens — Nicholas Ho</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../../src/style.css"><link rel="stylesheet" href="../../src/case.css"></head><body class="case-page healthcare-case">
-<header class="nav shell"><a class="logo" href="../../index.html" aria-label="Nicholas Ho, home">NH<span>.</span></a><nav aria-label="Case study navigation"><a href="../../index.html#work">All work</a><a href="../../index.html#about">About</a></nav><a class="nav-cta" href="../../assets/Nicholas_Ho_Resume.pdf" target="_blank">Resume ↗</a></header>
-<main><section class="case-hero shell"><p class="eyebrow">02 · Regression / Visualization</p><h1>Care<em>Lens</em></h1><p class="case-deck">An end-to-end regression workflow that brings complex treatment-cost patterns into focus.</p><div class="case-meta"><div><span>Timeline</span><p>Mar–Dec 2025</p></div><div><span>Dataset</span><p>50,000+ healthcare records</p></div><div><span>Stack</span><p>Python, XGBoost, scikit-learn, Tableau, matplotlib</p></div></div></section>
-<section class="case-art case-health" aria-label="Abstract healthcare data illustration"><div class="health-cross">+</div><p>R²<br><strong>&gt;0.85</strong></p></section>
-<section class="case-content shell"><aside><p class="eyebrow">The project</p></aside><div><h2>Turning inconsistent healthcare records into reliable cost estimates.</h2><p class="case-lead">The project pairs a rigorous preprocessing and regression pipeline with clear visual analysis so model performance and pricing patterns can be communicated to stakeholders.</p><div class="case-stats"><div><strong>50K+</strong><span>records processed</span></div><div><strong>&gt;.85</strong><span>model R²</span></div><div><strong>25%</strong><span>less training time</span></div></div><h3>Approach</h3><p>I cleaned and prepared more than 50,000 records by imputing missing values, encoding categorical variables, and scaling features. I then compared regression approaches with scikit-learn and XGBoost, evaluating the results with MAE, RMSE, and R².</p><h3>What I delivered</h3><ul class="case-list"><li>An end-to-end preprocessing and regression pipeline</li><li>An XGBoost model achieving an R² above 0.85</li><li>A 25% reduction in training time through improved preprocessing</li><li>matplotlib analysis and Tableau dashboards for stakeholder presentation</li></ul></div></section>
-<section class="next-case"><div class="shell"><p class="eyebrow">Previous project</p><a href="../nba-prediction/index.html"><span>CourtVision</span> →</a></div></section></main><footer class="shell"><p>© 2026 Nicholas Ho</p><p>Case study 02 / 02</p><a href="../../index.html">Home ↑</a></footer></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CareLens — a leakage-aware hospital cost prediction application built by Nicholas Ho." />
+    <title>CareLens — Nicholas Ho</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../src/style.css" />
+    <link rel="stylesheet" href="../../src/case.css" />
+  </head>
+  <body class="case-page healthcare-case">
+    <header class="nav shell">
+      <a class="logo" href="../../index.html" aria-label="Nicholas Ho, home">NH<span>.</span></a>
+      <nav aria-label="Case study navigation"><a href="../../index.html#work">All work</a><a href="../../index.html#about">About</a></nav>
+      <a class="nav-cta" href="../../assets/Nicholas_Ho_Resume.pdf" target="_blank">Resume ↗</a>
+    </header>
+
+    <main>
+      <section class="case-hero shell">
+        <p class="eyebrow">02 · Regression / Machine Learning Product</p>
+        <h1>Care<em>Lens</em></h1>
+        <p class="case-deck">Hospital cost prediction at admission—built to estimate costs from information available before treatment while avoiding target leakage.</p>
+        <div class="case-actions">
+          <a class="button dark" href="https://hospital-cost-estimator-nicky.streamlit.app/" target="_blank" rel="noreferrer">Live application ↗</a>
+          <a class="button text" href="https://github.com/nickyh1024/hospital_pricing_prediction_project" target="_blank" rel="noreferrer">View GitHub ↗</a>
+        </div>
+        <div class="case-meta">
+          <div><span>Dataset</span><p>248 patient records</p></div>
+          <div><span>Inputs</span><p>18 admission-time features</p></div>
+          <div><span>Stack</span><p>Python, pandas, scikit-learn, Streamlit</p></div>
+        </div>
+      </section>
+
+      <section class="case-art case-health" aria-label="Abstract healthcare data illustration">
+        <div class="health-cross">+</div>
+        <p>HELD-OUT MAE<br /><strong>−27.4%</strong></p>
+      </section>
+
+      <section class="case-content shell">
+        <aside><p class="eyebrow">The project</p></aside>
+        <div>
+          <h2>Useful estimates without looking into the future.</h2>
+          <p class="case-lead">CareLens is an end-to-end machine learning application that estimates hospital costs from demographic, clinical, and admission-time information while making uncertainty and model limitations visible.</p>
+
+          <div class="case-stats">
+            <div><strong>248</strong><span>patient records</span></div>
+            <div><strong>18</strong><span>admission-time features</span></div>
+            <div><strong>27.4%</strong><span>lower held-out MAE</span></div>
+          </div>
+
+          <h3>Preventing target leakage</h3>
+          <p>I excluded variables that only become available after admission so the model reflects a realistic prediction setting. Reusable preprocessing pipelines handle missing-value imputation, categorical encoding, feature scaling, and log-transformed regression consistently across training and inference.</p>
+
+          <h3>Evaluation against a real baseline</h3>
+          <p>I compared Ridge regression and Random Forest models with a median baseline using five-fold cross-validation. The selected workflow reduced held-out mean absolute error by 27.4%, from ₹83.7K to ₹60.7K.</p>
+
+          <h3>Reliability and limitations</h3>
+          <p>Permutation importance, empirical prediction intervals, subgroup error analysis, and data-quality checks make the model easier to audit. The model card documents important limitations, including the small dataset and higher uncertainty for unusually expensive cases.</p>
+
+          <h3>What I delivered</h3>
+          <ul class="case-list">
+            <li>A reproducible, leakage-aware training and preprocessing pipeline</li>
+            <li>Cross-validated model comparison against a median baseline</li>
+            <li>Prediction intervals, subgroup diagnostics, and data-quality checks</li>
+            <li>Automated tests, reproducible training scripts, and a model card</li>
+            <li>A deployed Streamlit application for interactive cost estimates</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="next-case"><div class="shell"><p class="eyebrow">Previous project</p><a href="../nba-prediction/index.html"><span>CourtVision</span> →</a></div></section>
+    </main>
+    <footer class="shell"><p>© 2026 Nicholas Ho</p><p>Case study 02 / 04</p><a href="../../index.html">Home ↑</a></footer>
+  </body>
+</html>
